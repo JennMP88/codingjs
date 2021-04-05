@@ -12,3 +12,4 @@ function sleepIn(weekday, vacation){
     else return false
 }
 console.log(sleepIn())
+
