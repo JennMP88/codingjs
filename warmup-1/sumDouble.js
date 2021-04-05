@@ -6,8 +6,10 @@
 // sumDouble(3, 2) → 5
 // sumDouble(2, 2) → 8
 
-function sumDouble(a, b){
-  if(a===b){
-  return (a+b)*2;}
-  else return a+b 
+function diff21(n){
+  if(n>21){
+    let abs=Math.abs(n-21)
+  return abs*2
+  }
+  else return Math.abs(n-21)
 }
