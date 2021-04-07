@@ -12,7 +12,7 @@ function close10(a, b){
   
   differenceA=Math.abs(10-a)
   differenceB=Math.abs(10-b)
-  else if (differenceA>differenceB){
+  if (differenceA>differenceB){
     return b
   }
   else if (differenceA===differenceB){
