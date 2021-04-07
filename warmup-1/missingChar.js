@@ -6,3 +6,8 @@
 // missingChar('kitten', 0) → itten
 // missingChar('kitten', 4) → kittn
 
+function missingChar(str, n){
+  let beginning=str.slice(0,n)
+  let end=str.slice(n+1,str.length)
+  return beginning+end
+}
