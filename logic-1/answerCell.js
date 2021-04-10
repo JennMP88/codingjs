@@ -6,3 +6,14 @@
 // answerCell(false, false, false) → true
 // answerCell(false, false, true) → false
 // answerCell(true, false, false) → false
+
+function answerCell(isMorning, isMom, isAsleep){
+  // if mom and morning->true
+  if((isMorning===false || isMom===true) && isAsleep===false){
+    return true
+  }
+  else return false
+}
+console.log(answerCell(false, false, false)) //true
+console.log(answerCell(false, false, true)) //false
+console.log(answerCell(true, false, false)) // false
