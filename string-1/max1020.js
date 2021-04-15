@@ -31,3 +31,19 @@ function max1020(a, b){
         return 0}
  
 }
+
+// Alejo's approach-----------
+// function max1020(a, b){
+//   if (isInRange(a) && isInRange(b)) {
+//     if (a > b) return a
+//     else return b
+//   }
+  
+//   if (isInRange(a)) return a
+//   if (isInRange(b)) return b
+//   return 0
+// }
+// ​
+// function isInRange(n) {
+//   return (n >= 10 && n <=20)
+// }
