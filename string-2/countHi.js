@@ -33,7 +33,7 @@ function countHi(str){
     
   }
    
-  return count
+  return count;
   
   }
   console.log(countHi('abc hi ho')) // → 1
