@@ -45,8 +45,6 @@ if(!str.includes("x") && (!str.includes("y"))){
 
 }
 
-
-
 console.log( xyBalance('aaxbby')) // true
 console.log(xyBalance('aaxbb')) // false
 console.log(xyBalance('yaaxbb')) // false
