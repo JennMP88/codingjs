@@ -22,6 +22,7 @@ function getSandwich (str){
   }
   for(let j=0;j<arr.length;j++){
      //arr[0,8], [1,9,14]
+     
     
   }
 
