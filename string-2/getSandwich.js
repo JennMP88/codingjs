@@ -9,24 +9,37 @@
 // getSandwich('xxbreadjambreadyy') → jam
 // getSandwich('xxbreadyy') →
 
-function getSandwich (str){
-  let string=""
-  let word="bread"
-  let wordLengthIdx=word.length-1 //idx 4
-  let arr=[]
 
+function getSandwich(str){
+  let string=""
+    let word="bread"
+    let wordLengthIdx=word.length
+    let arr=[]
   for(let i=0;i<str.length;i++){
-    if(str[i]==="b"){
+    if(str[i]==="b" && str.slice(i,i+5)==="bread"){
      arr.push(i)
     }
   }
-  for(let j=0;j<arr.length;j++){
-     //arr[0,8], [1,9,14]
-     
     
-  }
+    for(let i=0;i<str.length;i++){
+      if(str[i]==="b" && str.slice(i,i+5)==="bread" && arr.length>2){
+        
+        let lastArr=arr[arr.length-1] //last idx value in array where last b for bread is
+        let word=str.slice(arr[0]+5,lastArr)
+        return string+=word
+      }
 
-
+      if(str[i]==="b" && str.slice(i,i+5)==="bread" && arr.length<=2){
+        let num=i+wordLengthIdx //idx 5
+        let lastIdxArr=arr[arr.length-1] //last idx value in array where last b for bread is
+        let rest=str.slice(num,lastIdxArr)
+        return string+=rest
+      }
+    }
+    return ""
+  
 }
 console.log(getSandwich('breadjambread'))//→ jam
 console.log(getSandwich('xbreadjambreadbryy'))//→ jam
+console.log(getSandwich('breadbreadbreadbread'))//breadbread
+console.log(getSandwich('xxbreadbreadjambreadyy'))//breadjam
