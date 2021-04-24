@@ -11,28 +11,40 @@
 
 function oneTwo(str){
   let arr=[]
+  let string=""
+  // console.log(stringArr)
   // cut string in groups of three up to the end of the string
-  if(str.length<3){return str}
-  if(str.length>=3){
-    let string=""
-    //chars to move 
-    //idx 0, after to idx2 +2     
-    //3 idx, after to idx5 +2
-    //6 idx, after to idx8 +2
-    for(let i=0;i<str.length;i++){
+  if(str.length<3){return ""}
+
+  if(str.length>=3 ){
+    let stringArr=str.split("")
+    
+    
+    for(let i=0;i<stringArr.length;i++){
       if(i===0 || i%3===0){
-        console.log(str[i])  //tg
-        arr.push(i) 
+      let char=stringArr.splice(i,1) //t and g
+    
+  
+      stringArr.splice(i+2,0,char)      
       }
     }
-    for(let i=0;i<arr.length;i++){ //[0,3]
-      let sliced=str.slice(arr[i],arr[i]+1)
-      //put sliced word into +2 position
-      string+=`${sliced}`
-    }
-    return string
+      let joined=stringArr.join("")
+
+     string+=joined
+    
+if(string.length%3===0){
+   return string
+ }
+
+ if(string.length%3!==0){
+   let remainder=string.length%3
+   return string.slice(0,str.length-remainder)
  }
 }
-// console.log(oneTwo('abc') ) //bca
-// console.log(oneTwo('tca') ) //cat
+}
+ 
+console.log(oneTwo('abc') ) //bca
+console.log(oneTwo('tca') ) //cat
 console.log(oneTwo('tcagdo')) //catdog
+console.log(oneTwo('1234567890')) //2315648970
+console.log(oneTwo('abcdefghijklkmnopqrstuvwxyz12345678'))// bcaefdhigkljmnkpqostrvwuyzx231564
