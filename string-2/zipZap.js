@@ -14,7 +14,7 @@ function zipZap(str){
   for(let i=0;i<str.length;i++){
     if(str.slice(i,i+1)==="z" && str.slice(i+2,i+3)==="p") { 
       str=str.split("") 
-      let this2=str.splice(i+1,1) //remove middle where i
+      str.splice(i+1,1) //remove middle where i
       str=str.join("")
      
     }
