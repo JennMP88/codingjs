@@ -24,7 +24,6 @@ function oneTwo(str){
       if(i===0 || i%3===0){
       let char=stringArr.splice(i,1) //t and g
     
-  
       stringArr.splice(i+2,0,char)      
       }
     }
