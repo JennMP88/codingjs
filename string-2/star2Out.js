@@ -10,21 +10,29 @@
 // starOut('sm*eilly') → silly
 
 function starOut(str){
-  let regEx=/[\*]/g
-  let string=str.split("")
-  for(let i=0;i<string.length;i++){
-    
+  let result=""
 
-    if(string[i+1].match(regEx)){
-      string.splice(i+2,1) 
-      // string.splice(i,1) 
-      // string.splice(i-1,1)   
+  for(let i=0;i<str.length;i++){
+    let current=str[i]
+    let next=str[i+1]
+    let previous=str[i-1]
+
+    if(next==="*"){
+      str[i+2]
     } 
+    if(current==="*"){
+      str[i+1]
+    }
+    if (previous==="*"){
+      str[i+1]
+    }
     
-    // console.log(string,"here")
+  if (current!=="*" ||previous!=="*" || next!=="*"){
+    result+=str[i]
+  }
  
   }
-  return string.join("")
+  return result
 }
-// console.log(starOut('ab**cd') ) //ad
+
 console.log(starOut('ab**cd') ) //ad

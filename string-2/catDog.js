@@ -56,6 +56,6 @@ function catDog(str){
 // return false
 
 // }
-console.log(catDog('catdogcat'))// → true
+console.log(catDog('catdogcat'))// → false
 console.log(catDog('catcat'))// → false
 console.log(catDog('1cat1cadodog'))//→ true
