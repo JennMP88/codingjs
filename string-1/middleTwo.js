@@ -8,15 +8,12 @@
 // middleTwo('Practice') →
 
 function middleTwo(str){
-  if(str.length%2!==0){return str}
-  
-  else if (str.length>=2){
+  let string=""
+        let prev=str[Math.floor(str.length/2)-1]
+        let mid=str[Math.floor(str.length/2)]
+        string+=prev+mid
+      
+  return string
  
-  let first=Math.floor((str.length-1)/2)
-  let next=first+1
-
-
-  return str[first]+str[next]
-
-    }
-  }
+}
+console.log(middleTwo('string'))// 
