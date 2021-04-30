@@ -16,4 +16,16 @@ function middleTwo(str){
   return string
  
 }
-console.log(middleTwo('string'))// 
+console.log(middleTwo('string'))//
+
+// -----coding js solution passed, not ans to whats asked
+// function middleTwo(str){
+//   let string=""
+//   if(str.length%2 !==0){return str}
+//   if(str.length>=2){
+//         let prev=str[Math.floor(str.length/2)-1]
+//         let mid=str[Math.floor(str.length/2)]
+//         string+=prev+mid
+//   }
+//   return ""
+// }
