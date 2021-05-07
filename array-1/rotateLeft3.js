@@ -7,5 +7,8 @@
 // rotateLeft3([7, 0, 0]) → 0,0,7
 
 function rotateLeft3(nums){
-  
+  //try slicing
+  //or
+  //taking nums and taking a num of how many elements you want to shift
+  //--use modulo
 }
