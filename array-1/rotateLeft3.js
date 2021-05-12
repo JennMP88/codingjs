@@ -7,13 +7,13 @@
 // rotateLeft3([7, 0, 0]) → 0,0,7
 
 function rotateLeft3(nums){
-  
-
-
-    let first=nums.shift()//1
-    nums.push(first)
+      
+    //version One
+    let temp=nums[0]
+    nums[0]=nums[1]
+    nums[1]=nums[nums.length-1]
+    nums[nums.length-1]=temp
     return nums
-    
    //version Two
     // let first=nums.shift()//1
     // let rest=nums.slice(0)
@@ -25,5 +25,7 @@ function rotateLeft3(nums){
     // let rest=nums.slice(1)
     // let here=rest.concat(first)
     // return here
+
+  //version Four
   }
   console.log(rotateLeft3([1,2,3]))//2,3,1
