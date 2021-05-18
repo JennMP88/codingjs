@@ -11,11 +11,27 @@
 // noTeenSum(1, 2, 3) → 6
 // noTeenSum(2, 13, 1) → 3
 // noTeenSum(2, 1, 14) → 3
-
 function noTeenSum(a, b, c){
-let arr=[13,14,17,18,19]
-  // param can be between 13,14,17,18,19 not 15,16
-//if a is equal to any number in the array then return the sum of the other nums
-
-console.log(noTeenSum(1,2,3))//6
-console.log(noTeenSum(15,2,3))//5
+  let sum=0
+  let num=[a,b,c]
+  let arr=[13,14,17,18,19]
+  let sumNums=[]
+  
+  
+  for(let i=0;i<num.length;i++){
+    if(num[i]>12 && num[i]<20){
+      if(num[i] !==15 && num[i] !==16){
+      num[i]=0
+      sum+=num[i]
+    }
+   }
+   sumNums.push(num[i]) 
+  }
+    
+  for(let i=0;i<sumNums.length;i++){
+    sum+=sumNums[i]
+  }
+  return sum
+  }
+console.log(noTeenSum(17,19,3))//6
+// console.log(noTeenSum(15,2,3))//5
