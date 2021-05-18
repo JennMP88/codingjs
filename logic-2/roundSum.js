@@ -13,7 +13,61 @@
 // roundSum(6, 4, 4) → 10
 
 function roundSum(a, b, c){
-  //20,20,20
+  let arr=[a,b,c]
+  let nums=[]
   
+
+
+  for(let i=0;i<arr.length;i++){
+    let stringed=arr[i].toString()
+    
+    if(stringed.length===1 && stringed>4){
+      nums.push(10)  
+    }
+    else if ( stringed.length===1 && arr[i]<=4){
+      nums.push(0)   
+    }
+    
+  
+    
+     
+ //   -------------------------------
+    if(stringed.length>1){
+      let firstDigit=stringed.slice(0,stringed.length-1) //1  
+      let lastDigit=stringed.slice(stringed.length-1) //last digit
+    
+    
+
+    if(lastDigit>4){
+    let firstConverted=parseInt(firstDigit)+1
+    stringed=parseInt(firstConverted+"0")
+    nums.push(stringed)
+   }
+  
+   if(lastDigit<=4){
+    let firstConverted=parseInt(firstDigit)
+    stringed=parseInt(firstConverted+"0")
+    nums.push(stringed)
+
+   }
+      
+      
+      
+  }
+    
+    
 }
-console.log(roundSum(16,17,18))//60
+  
+
+let sum=0
+for(let i=0;i<nums.length;i++){
+  sum+=nums[i]
+}
+
+
+  return sum
+}
+// console.log(roundSum(16,17,18))//60
+// console.log(roundSum(14,12,26))// 50
+// console.log(roundSum(12,13,14))// 30
+console.log(roundSum(0,2,9))// 30
