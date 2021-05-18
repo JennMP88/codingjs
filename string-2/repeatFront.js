@@ -10,15 +10,28 @@
 // repeatFront('Ice Cream', 2) → IcI
 
 function repeatFront(str, n){
-  // let stringed=str.slice(str,n)
-  string=""
-  
-  for(let i=n;i>0;i--){
-    let stringed=str.slice(str,i)
-    string+=stringed
+  let num=n
+  let res=""
+
+  let myWord=str.slice(0,n)
+
+  for(let i=0;i<myWord.length;i++){
+    res+=str.slice(0,num)
+    num--
   }
- return string
+  return res
 }
+// ----------------------
+// function repeatFront(str, n){
+//   // let stringed=str.slice(str,n)
+//   string=""
+  
+//   for(let i=n;i>0;i--){
+//     let stringed=str.slice(str,i)
+//     string+=stringed
+//   }
+//  return string
+// }
 console.log(repeatFront('Chocolate', 4)) //→ ChocChoChC
 console.log(repeatFront('Chocolate', 3) )//→ ChoChC
 console.log(repeatFront('Ice Cream', 2)) //→ IcI

@@ -30,6 +30,7 @@ let startCut=idx[idx.length-1]
 let cutStr=str.slice(startCut)
 
 
+
 //Ask:does the new cut string after last x include y?
 if(cutStr.includes("y")){
   return true
