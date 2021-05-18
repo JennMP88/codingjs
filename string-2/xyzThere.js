@@ -65,24 +65,34 @@
 //   }
 //   return false 
 // }
+
 function xyzThere(str){
-  let word="xyz"
-  let count=0;
-  
-  //takes count for xyz appears more than once
-   for(let i=0;i<str.length;i++){
-  
-    if(str.slice(i,i+3)===word){
-        if(str[i-1]!=="."){
-          return true
-        }
-      
+  for(let i=0; i<str.length;i++){
+    if(str.slice(i,i+3)==="xyz" && str[i-1]!=="."){
+      return true
     }
-  
-   }
-  //takes into account all remaining cases to keep looping
-    return false
   }
+  return false
+}
+//------------------------------
+// function xyzThere(str){
+//   let word="xyz"
+//   let count=0;
+  
+//   //takes count for xyz appears more than once
+//    for(let i=0;i<str.length;i++){
+  
+//     if(str.slice(i,i+3)===word){
+//         if(str[i-1]!=="."){
+//           return true
+//         }
+      
+//     }
+  
+//    }
+//   //takes into account all remaining cases to keep looping
+//     return false
+//   }
   console.log(xyzThere('xabcxyz')) //→ true
   console.log(xyzThere('abc.xyz'))// → false
   console.log(xyzThere('xyz.abc'))// → true
