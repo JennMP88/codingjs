@@ -8,56 +8,18 @@
 // centeredAverage([-10, -4, -2, -4, -2, 0]) → -3
 
 function centeredAverage(nums){
-  let withoutEndsRepeats
-  let avg
-  let sortedArr=nums.sort((a, b) => a - b)
- 
+  let sum=0
+  let sorted=nums.sort((a,b)=>a-b) //1,1,5,5,7,8,10
+  let newArr=[]
+  sorted.pop()
+  sorted.shift()
+  let result=0
 
-//whats the diff between sortedArr.len and sortedArr.length
-//why when i use .length inside for sortedArr.len>=3
-//---console.log(centeredAverage([1, 1, 100]))// → 1)
-//it's wrong. //
-//yet .len doesn't work for console.log(centeredAverage([1, 1, 5, 5, 10, 8, 7]))// → 5.2
-// and .length gives me 6---
-//it gives me  console.log(withoutEndsRepeats)//[1,1,5,5,7,8,10]
-//also is 6 correct and coding bats wrong?
-
-  for(let i=0;i<sortedArr.length;i++){
-    if(sortedArr[0]===sortedArr[1] && sortedArr.len>=3){
-     sortedArr.splice(0,1)
-    }
-
-    if(sortedArr[sortedArr.length-1]===sortedArr[sortedArr.length-2] && sortedArr.len>=3){
-      sortedArr.splice(sortedArr.length-1,1)
-
-    }
-
-   withoutEndsRepeats=sortedArr
+  for(let i=0;i<sorted.length;i++){
+    sum+=nums[i]
+    result=sum/sorted.length
   }
-  
-  console.log(withoutEndsRepeats)//[1,1,5,5,7,8,10]
-
-  for(let i=0;i<withoutEndsRepeats.length;i++){
-    arrLen=withoutEndsRepeats.length
-
-    //even
-    if(arrLen%2===0){
-      let middle=withoutEndsRepeats[Math.floor(arrLen/2)]
-      let prev=withoutEndsRepeats[(arrLen/2)-1]
-      avg=(middle+prev)/2
-
-    }
-    //odd
-     if(arrLen%2!==0){
-      let middle=withoutEndsRepeats[Math.floor(arrLen/2)]
-      avg=middle
-    }
-
-  }
-  return avg
+return result
 }
-// console.log( centeredAverage([1, 2, 3, 4, 1,100]) ) //3
-console.log(centeredAverage([1, 1, 5, 5, 10, 8, 7]))// → 5.2
-// console.log( centeredAverage([-10, -4, -2, -4, -2, 0])) //→ -3
-console.log(centeredAverage([1, 1, 100]))// → 1)
-
+// console.log(centeredAverage([1, 2, 3, 4, 100]))//3
+centeredAverage([1, 1, 5, 5, 10, 8, 7])// 5.2
