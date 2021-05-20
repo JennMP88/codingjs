@@ -6,34 +6,31 @@
 // sum13([1, 2, 2, 1]) → 6
 // sum13([1, 1]) → 2
 // sum13([1, 2, 2, 1, 13]) → 6
-
 function sum13(nums){
-  let count=0;
   let arr=[]
+  let sum=0
   
-  //zero for an empty array
-  if(nums.length===0){
-    return 0
+  if(nums[nums.length-1]===13){
+    nums.pop()
   }
-  
-  //cut off nums 13 and those immediately after
-  //assigd new arr copy to arr
-  for(let i=0;i<nums.length;i++){
-    let cut
-    if(nums[i]>13 || nums[i]===13){
-     cut= nums.splice(i,2) //13
-     arr=nums
-    }
-    else {
-      count+=nums[i]
-    }
+  if(nums[nums.length-2]===13 && nums[0]!==13 && nums.length===3){
+    nums.splice(nums.length,1)
+    return nums[0]
   }
  
- //add all nums in the new arr
-  for(let i=0;i<arr.length;i++){
-    count+=arr[i]
+  for(let i=0;i<nums.length;i++){
+  
+    if(nums[i]===13){
+     nums.splice(i,2)
+    }
+    if(nums.length===0){
+      return 0
+    }
+     sum+=nums[i]
   }
-   return count
- }
- console.log(sum13([1, 2, 2, 1]))// → 6
- console.log(sum13([1, 2, 13, 2, 1, 13]) )// → 4
+   return sum
+   
+}
+console.log(sum13([1, 2, 2, 1]))// → 6
+console.log(sum13([13, 1, 2, 13, 2, 1, 13]))//3
+console.log(sum13([1, 2, 13, 2, 1, 13]))// → 4
