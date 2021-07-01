@@ -12,3 +12,8 @@ function extraEnd(str){
   
   return `${lastTwo}${lastTwo}${lastTwo}`
 }
+// ----------------Alternative Solution
+// function extraEnd(str){
+//   let sliced=str.slice(str.length-2)
+//   return sliced.repeat(3)
+// }

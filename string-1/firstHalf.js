@@ -9,7 +9,6 @@
 
 
 function firstHalf(str){
-  let firstHalf2=str.length/2
-//   str.slice(0,firstHalf2)
- return str;
+  let half=str.length/2
+  return str.slice(0,half)
 }

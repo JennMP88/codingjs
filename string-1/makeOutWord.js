@@ -10,11 +10,13 @@
 
 function makeOutWord(out, word){
 
-  let firstHalf=(out.length/2-1)+1
-   
+  let firstHalf=(out.length/2)
+     
   let first= out.slice(0,firstHalf)
   
   let last=out.slice(firstHalf)
   
   return `${first}${word}${last}`
 }
+
+console.log(makeOutWord('<<>>', 'Yay'))

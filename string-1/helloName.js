@@ -9,3 +9,4 @@
 function helloName(name){
   return `Hello ${name}!`
 }
+console.log(helloName('Jennifer'))
