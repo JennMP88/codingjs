@@ -11,3 +11,15 @@ function missingChar(str, n){
   let end=str.slice(n+1,str.length)
   return beginning+end
 }
+
+
+// solution 2 
+function missingChar(str, n){
+  let string=""
+  for(let i=0; i<str.length;i++){
+    if(i!==n){
+      string+=(str[i]) 
+      }
+    }
+    return string
+}
