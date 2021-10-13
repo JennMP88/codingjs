@@ -9,7 +9,7 @@
 function delDel(str){
   del=str.slice(1,4)
    if(del==="del"){
-     return str[0]+str.slice(4,str.length)
+     return str[0]+str.slice(4)
    }
    else return str
    
