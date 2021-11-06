@@ -7,12 +7,15 @@
 // firstTwo('abcdefg') → ab
 // firstTwo('ab') → ab
 function firstTwo(str2){
-  let firstTwo=str2.slice(0,2)
+  if(str.length<2){return str}
+  let firstTwo=str.slice(0,2)
+  return firstTwo
+  // let firstTwo=str2.slice(0,2)
 
-  if(str2.length>2){
+  // if(str2.length>2){
     
-    return firstTwo
-  }
-  else (str2.length<2)
-  return str2
+  //   return firstTwo
+  // }
+  // else (str2.length<2)
+  // return str2
 }
