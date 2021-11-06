@@ -9,7 +9,7 @@
 
 
 function nonStart(a, b){
-  let firstStr=a.slice(1)
-  let secondChar=b.slice(1)
-return firstStr+secondChar
+  a=a.slice(1)
+  b=b.slice(1)
+ return a+b
 }
