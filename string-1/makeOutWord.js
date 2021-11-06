@@ -9,14 +9,17 @@
 
 
 function makeOutWord(out, word){
+    let firstMiddle=out.slice(0,out.length/2)
+    let restOfWord=out.slice(out.length/2)
+    return `${firstMiddle}${word}${restOfWord}`
 
-  let firstHalf=(out.length/2)
+  // let firstHalf=(out.length/2)
      
-  let first= out.slice(0,firstHalf)
+  // let first= out.slice(0,firstHalf)
   
-  let last=out.slice(firstHalf)
+  // let last=out.slice(firstHalf)
   
-  return `${first}${word}${last}`
+  // return `${first}${word}${last}`
 }
 
 console.log(makeOutWord('<<>>', 'Yay'))
