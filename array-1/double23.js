@@ -17,3 +17,23 @@ function double23(nums){
   }
   return false
 }
+
+// alternatively using continue
+// function double23(nums){
+//   let twoTwice=0
+//   let threeTwice=0
+//   for(let i=0;i<nums.length;i++){
+//    if(nums[i]===2){
+//      twoTwice+=1
+//      continue
+//    }
+//     if(nums[i]===3){
+//      threeTwice+=1
+//      continue
+//    } 
+//   }
+//    if(twoTwice===2 || threeTwice===2){
+//      return true
+//    }
+//    return false
+//  }
