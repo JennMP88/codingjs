@@ -1,3 +1,6 @@
+// Test your skills: Objects basics answers 
+// https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Test_your_skills:_Object_basics 
+
 // Object basics1
 const cat = {
   name : 'Bertie',
