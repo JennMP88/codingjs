@@ -8,10 +8,10 @@
 // intMax(3, 2, 1) → 3
 
 if (a > b & a > c) {
-  return a;
-  } else if (b > a & b > c) {
-  return b;
-  } else {
+  return a;} 
+else if (b > a & b > c) {
+  return b;} 
+else {
   return c;
   }
-  }
+}
